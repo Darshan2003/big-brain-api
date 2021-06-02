@@ -11,10 +11,9 @@ const db = knex({
 
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : 'postgres',
-    password : 'darshan@postgre@',
-    database : 'big-brain'
+    host : 'process.env.DATABASE_URL',
+	ssl: true,
+ 
   }
 });
 
